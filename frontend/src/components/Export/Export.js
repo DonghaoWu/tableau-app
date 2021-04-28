@@ -17,7 +17,7 @@ const Export = props => {
 
     useEffect(() => {
         createViz()
-    }, [])
+    }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
     // Opens the Download to PDF dialog box
     function exportToPDF() {

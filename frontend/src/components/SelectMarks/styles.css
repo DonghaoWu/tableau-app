@@ -1,0 +1,7 @@
+.tableau-controllers{
+    margin: 0.5rem;
+    width:90%;
+
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,14 @@
+.tableau-data{
+    background-color: white;
+    width:88%;
+    padding:1rem;
+    border-radius: 10px;
+
+    display:flex;
+    justify-content: center;
+}
+
+#dataTarget{
+    background-color: white;
+    width:90%;
+}

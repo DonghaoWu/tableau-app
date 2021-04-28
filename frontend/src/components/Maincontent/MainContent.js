@@ -3,6 +3,11 @@ import './styles.css';
 import BasicEmbed from '../BasicEmbed/BasicEmbed';
 import DynamicLoad from '../DynamicLoad/DynamicLoad';
 import Export from '../Export/Export';
+import Filter from '../Filter/Filter';
+import GetData from '../GetData/GetData';
+import Resize from '../Resize/Resize';
+import EventsResponse from '../EventsResponse/EventsResponse';
+import SelectMarks from '../SelectMarks/SelectMarks';
 
 import {
     Switch,
@@ -22,6 +27,21 @@ const MainContent = props => {
                     </Route>
                     <Route path="/export">
                         <Export />
+                    </Route>
+                    <Route path="/fliter">
+                        <Filter />
+                    </Route>
+                    <Route path="/get-data">
+                        <GetData />
+                    </Route>
+                    <Route path="/resize">
+                        <Resize />
+                    </Route>
+                    <Route path="/events-response">
+                        <EventsResponse />
+                    </Route>
+                    <Route path="/select-marks">
+                        <SelectMarks />
                     </Route>
                 </Switch>
             </div>

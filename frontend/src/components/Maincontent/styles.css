@@ -11,7 +11,7 @@
 
 .content-container{
     width:95%;
-    height:98%;
+    min-height:98%;
     padding:1rem;
     background-color: lightgray;
     border-radius: 10px;

@@ -11,14 +11,19 @@
 
 .nav-options{
     background-color: lightgray;
-
     width:90%;
-    height: 90%;
+    min-height:98%;
     border:1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 li{
     list-style-type: none; 
+    margin-top: 1rem;
 }
