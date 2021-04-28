@@ -1,7 +1,8 @@
 .main-content{
-    width:75%;
+    width:80%;
     background-color: white;
-    padding:2.5%;
+    padding:1%;
+    border-radius: 10px;
 
     display:flex;
     justify-content: center;
@@ -10,10 +11,10 @@
 
 .content-container{
     width:95%;
-    height:95%;
+    height:98%;
     padding:1rem;
-
     background-color: lightgray;
+    border-radius: 10px;
 
     display:flex;
     flex-direction: column;

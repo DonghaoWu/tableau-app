@@ -5,7 +5,7 @@ const { tableau } = window;
 
 const BasicEmbed = props => {
     const ref = useRef(null);
-    const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Obesity";
+    const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Flights";
 
     useEffect(() => {
         const options = {
@@ -17,7 +17,7 @@ const BasicEmbed = props => {
 
     return (
         <Fragment>
-            <p>Basic embed</p>
+            <h4>Basic embed</h4>
             <div ref={ref} className='tableau-content'></div>
             <div className='tableau-comment'>
                 <p>My opinion:</p>

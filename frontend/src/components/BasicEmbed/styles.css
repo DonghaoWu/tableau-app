@@ -2,14 +2,15 @@
     margin:.5rem;
     padding:.5rem;
     width:90%;
+    min-height: 700px;
 
     background-color: white;
     overflow: scroll;
-    /* border-radius: 10px; */
+    border-radius: 10px;
 
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tableau-comment{

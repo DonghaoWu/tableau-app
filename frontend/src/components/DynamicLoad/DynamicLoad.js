@@ -6,10 +6,10 @@ const { tableau } = window;
 const DynamicLoad = props => {
     const ref = useRef(null);
     const vizList = [
-        "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
-        "http://public.tableau.com/views/RegionalSampleWorkbook/College",
         "http://public.tableau.com/views/RegionalSampleWorkbook/Obesity",
         "http://public.tableau.com/views/RegionalSampleWorkbook/Flights",
+        "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
+        "http://public.tableau.com/views/RegionalSampleWorkbook/College",
         "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks"
     ];
 
@@ -44,7 +44,7 @@ const DynamicLoad = props => {
 
     return (
         <Fragment>
-            <p>Dynamic Load</p>
+            <h4>Dynamic Load</h4>
             <div ref={ref} className='tableau-content'></div>
             <div className='tableau-buttons'>
                 <button onClick={() => createViz(-1)}>Previous</button>

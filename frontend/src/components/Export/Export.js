@@ -5,9 +5,8 @@ const { tableau } = window;
 
 const Export = props => {
     const ref = useRef(null);
-    const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Storms";
+    const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks";
     const options = {
-        device: 'desktop',
         hideTabs: true
     }
     let viz;
@@ -51,7 +50,7 @@ const Export = props => {
 
     return (
         <Fragment>
-            <p>Export</p>
+            <h4>Export</h4>
             <div ref={ref} className='tableau-content'></div>
             <div className='tableau-buttons'>
                 <button onClick={exportToPDF}>Export to PDF</button>
