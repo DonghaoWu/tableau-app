@@ -1,0 +1,24 @@
+.tableau-content{
+    margin:.5rem;
+    padding:.5rem;
+    width:90%;
+
+    background-color: white;
+    overflow: scroll;
+    /* border-radius: 10px; */
+
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.tableau-comment{
+    margin:.5rem;
+    padding:.5rem;
+    width:90%;
+    height:10%;
+    background-color: white;
+    border-radius: 10px;
+
+    overflow: scroll;
+}

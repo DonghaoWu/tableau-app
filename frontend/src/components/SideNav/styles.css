@@ -1,0 +1,23 @@
+.side-nav{
+    width:20%;
+
+    background-color:rgb(155, 160, 199);
+    padding:2rem;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-options{
+    background-color: lightgray;
+
+    width:90%;
+    height: 90%;
+    border:1px solid black;
+    border-radius: 5px;
+}
+
+ul{
+    text-decoration: none;
+}
