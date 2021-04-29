@@ -3,7 +3,7 @@ import './styles.css';
 
 const { tableau } = window;
 
-const url = "http://public.tableau.com/views/RegionalSampleWorkbook/College";
+const url = "https://public.tableau.com/views/RegionalSampleWorkbook/College";
 
 const SelectMarks = props => {
     const ref = useRef(null);

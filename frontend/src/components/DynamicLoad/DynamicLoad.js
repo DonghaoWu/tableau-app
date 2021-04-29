@@ -3,11 +3,11 @@ import './styles.css';
 
 const { tableau } = window;
 const vizList = [
-    "http://public.tableau.com/views/RegionalSampleWorkbook/Obesity",
-    "http://public.tableau.com/views/RegionalSampleWorkbook/Flights",
-    "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
-    "http://public.tableau.com/views/RegionalSampleWorkbook/College",
-    "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks"
+    "https://public.tableau.com/views/RegionalSampleWorkbook/Obesity",
+    "https://public.tableau.com/views/RegionalSampleWorkbook/Flights",
+    "https://public.tableau.com/views/RegionalSampleWorkbook/Storms",
+    "https://public.tableau.com/views/RegionalSampleWorkbook/College",
+    "https://public.tableau.com/views/RegionalSampleWorkbook/Stocks"
 ];
 const vizLen = vizList.length;
 const options = {

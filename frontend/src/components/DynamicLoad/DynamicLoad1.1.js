@@ -6,11 +6,11 @@ const { tableau } = window;
 const DynamicLoad = props => {
     const ref = useRef(null);
     const vizList = [
-        "http://public.tableau.com/views/RegionalSampleWorkbook/Obesity",
-        "http://public.tableau.com/views/RegionalSampleWorkbook/Flights",
-        "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
-        "http://public.tableau.com/views/RegionalSampleWorkbook/College",
-        "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks"
+        "https://public.tableau.com/views/RegionalSampleWorkbook/Obesity",
+        "https://public.tableau.com/views/RegionalSampleWorkbook/Flights",
+        "https://public.tableau.com/views/RegionalSampleWorkbook/Storms",
+        "https://public.tableau.com/views/RegionalSampleWorkbook/College",
+        "https://public.tableau.com/views/RegionalSampleWorkbook/Stocks"
     ];
 
     let viz;

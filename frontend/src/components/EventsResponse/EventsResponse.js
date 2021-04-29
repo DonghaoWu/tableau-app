@@ -5,7 +5,7 @@ const { tableau } = window;
 
 const Resize = props => {
     const ref = useRef(null);
-    const url = "http://public.tableau.com/views/RegionalSampleWorkbook/College";
+    const url = "https://public.tableau.com/views/RegionalSampleWorkbook/College";
     // const [viz, setViz] = useState(null);
 
     let viz;

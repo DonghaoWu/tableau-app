@@ -5,7 +5,7 @@ const { tableau } = window;
 
 const GetData = props => {
     const ref = useRef(null);
-    const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Storms";
+    const url = "https://public.tableau.com/views/RegionalSampleWorkbook/Storms";
     const options = {
         hideTabs: true
     }

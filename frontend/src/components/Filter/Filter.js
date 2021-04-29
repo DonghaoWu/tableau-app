@@ -2,7 +2,7 @@ import React, { useRef, useEffect, Fragment, useState } from 'react';
 import './styles.css';
 
 const { tableau } = window;
-const url = "http://public.tableau.com/views/RegionalSampleWorkbook/College";
+const url = "https://public.tableau.com/views/RegionalSampleWorkbook/College";
 const options = {
     "Academic Year": "",
     hideTabs: true
