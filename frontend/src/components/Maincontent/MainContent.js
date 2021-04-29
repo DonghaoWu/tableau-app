@@ -19,7 +19,7 @@ const MainContent = props => {
         <div className='main-content'>
             <div className='content-container'>
                 <Switch>
-                    <Route exact path="/basic-embed">
+                    <Route exact path="/">
                         <BasicEmbed />
                     </Route>
                     <Route path="/dynamic-load">

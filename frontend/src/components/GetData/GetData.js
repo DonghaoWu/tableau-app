@@ -7,7 +7,6 @@ const GetData = props => {
     const ref = useRef(null);
     const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Storms";
     const options = {
-        "Academic Year": "",
         hideTabs: true
     }
     let viz, sheet, table;
@@ -34,19 +33,20 @@ const GetData = props => {
         sheet.getUnderlyingDataAsync(options).then(function (t) {
             table = t;
             let tgt = document.getElementById("dataTarget");
-            tgt.innerHTML = "<h4>Underlying Data:</h4><p>" + JSON.stringify(table.getData()) + "</p>";
+            tgt.innerHTML = JSON.stringify(table.getData()) + "</p>";
         });
     }
 
     return (
         <Fragment>
-            <h4>Get Data</h4>
+            <div className='tableau-title'>Get Data</div>
             <div ref={ref} className='tableau-content'></div>
-            <p>To download data for a workbook, your Tableau Server user account must have the Download Summary Data and Download Full Data permissions.</p>
             <div className='tableau-buttons'>
+                <div>To download data for a workbook, your Tableau Server user account must have the Download Summary Data and Download Full Data permissions.</div>
                 <button id='getData' onClick={getUnderlyingData}>Get Data</button>
             </div>
-            <div className='tableau-data'>
+            <div className='tableau-text'>
+                <h4>Underlying Data:</h4>
                 <div id="dataTarget"></div>
             </div>
         </Fragment>

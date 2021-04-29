@@ -50,7 +50,7 @@ const DynamicLoad = props => {
                 <button onClick={() => createViz(-1)}>Previous</button>
                 <button onClick={() => createViz(1)}>Next</button>
             </div>
-            <div className='tableau-comment'>
+            <div className='tableau-text'>
                 <p>My opinion:</p>
             </div>
         </Fragment>

@@ -4,7 +4,6 @@ import './styles.css';
 const { tableau } = window;
 const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Flights";
 const options = {
-    device: 'desktop',
     hideTabs: true
 }
 
@@ -17,9 +16,9 @@ const BasicEmbed = props => {
 
     return (
         <Fragment>
-            <h4>Basic embed</h4>
+            <div className='tableau-title'>Basic embed</div>
             <div ref={ref} className='tableau-content'></div>
-            <div className='tableau-comment'>
+            <div className='tableau-text'>
                 <p>My opinion:</p>
             </div>
         </Fragment>

@@ -1,29 +1,35 @@
 .side-nav{
-    width:15%;
-    background-color:rgb(155, 160, 199);
-    padding:1rem;
+    width:10%;
+    min-width: 150px;
+
+    padding:.5rem;
+    margin-right: .5rem;
+
     border-radius: 10px;
+    background-color:rgb(155, 160, 199);
 
     display:flex;
     justify-content: center;
-    align-items: center;
 }
 
 .nav-options{
+    padding-top:4rem;
     background-color: lightgray;
-    width:90%;
-    min-height:98%;
+    width:100%;
     border:1px solid black;
     border-radius: 10px;
 
     display:flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 
 li{
     list-style-type: none; 
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+li a{
+    text-decoration: none;
 }

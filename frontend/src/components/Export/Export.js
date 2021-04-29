@@ -52,7 +52,7 @@ const Export = props => {
 
     return (
         <Fragment>
-            <h4>Export</h4>
+            <div className='tableau-title'>Export</div>
             <div ref={ref} className='tableau-content'></div>
             <div className='tableau-buttons'>
                 <button onClick={exportToPDF}>Export to PDF</button>
@@ -62,7 +62,7 @@ const Export = props => {
                 <button onClick={exportPowerPoint}>Export to PowerPoint</button>
                 <button onClick={showDownloadDialog}>Show Download Dialog</button>
             </div>
-            <div className='tableau-comment'>
+            <div className='tableau-text'>
                 <p>My opinion:</p>
             </div>
         </Fragment>

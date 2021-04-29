@@ -11,8 +11,8 @@ const vizList = [
 ];
 const vizLen = vizList.length;
 const options = {
-    hideTabs: true
-};
+    hideTabs: true,
+}
 
 const DynamicLoad = props => {
     const ref = useRef(null);
@@ -40,13 +40,13 @@ const DynamicLoad = props => {
 
     return (
         <Fragment>
-            <h4>Dynamic Load</h4>
+            <div className='tableau-title'>Dynamic Load</div>
             <div ref={ref} className='tableau-content'></div>
             <div className='tableau-buttons'>
                 <button onClick={() => createViz(-1)}>Previous</button>
                 <button onClick={() => createViz(1)}>Next</button>
             </div>
-            <div className='tableau-comment'>
+            <div className='tableau-text'>
                 <p>My opinion:</p>
             </div>
         </Fragment>

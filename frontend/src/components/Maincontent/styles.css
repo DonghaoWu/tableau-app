@@ -1,17 +1,15 @@
 .main-content{
-    width:80%;
+    flex:1;
     background-color: white;
-    padding:1%;
+    padding:.5rem;
     border-radius: 10px;
 
     display:flex;
     justify-content: center;
-    align-items: center;
 }
 
 .content-container{
-    width:95%;
-    min-height:98%;
+    flex:1;
     padding:1rem;
     background-color: lightgray;
     border-radius: 10px;

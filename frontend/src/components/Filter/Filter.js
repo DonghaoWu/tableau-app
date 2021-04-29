@@ -37,7 +37,7 @@ const Filter = props => {
 
     return (
         <Fragment>
-            <h4>Filter</h4>
+            <div className='tableau-title'>Filter</div>
             <div ref={ref} className='tableau-content'></div>
             <div className='tableau-options'>
                 Year: <select id="changeYear" onChange={yearFilter}>
@@ -46,7 +46,7 @@ const Filter = props => {
                     <option value="2014">2014</option>
                 </select>
             </div>
-            <div className='tableau-comment'>
+            <div className='tableau-text'>
                 <p>Current Year: {year}</p>
             </div>
         </Fragment>

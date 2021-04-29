@@ -7,7 +7,7 @@ const SideNav = props => {
         <div className='side-nav'>
             <div className='nav-options'>
                 <li>
-                    <Link to="/basic-embed">Basic embed</Link>
+                    <Link to="/">Basic embed</Link>
                 </li>
                 <li>
                     <Link to="/dynamic-load">Dynamic Load</Link>

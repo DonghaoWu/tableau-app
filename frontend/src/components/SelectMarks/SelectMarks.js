@@ -79,7 +79,7 @@ const SelectMarks = props => {
                     <button onClick={clearCollegeSelection}>Clear all</button>
                 </div>
             </div>
-            <div className='tableau-comment'>
+            <div className='tableau-text'>
                 {
                     colleges.length ?
                         <p>Selected College:{colleges.join(',')}</p>

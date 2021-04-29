@@ -6,7 +6,14 @@ const { tableau } = window;
 const Resize = props => {
     const ref = useRef(null);
     const url = "http://public.tableau.com/views/RegionalSampleWorkbook/College";
+    // const [viz, setViz] = useState(null);
+
     let viz;
+    const createViz = () => {
+        viz = new tableau.Viz(ref.current, url, options);
+        // setViz(newViz);
+    }
+
 
     const listenToMarksSelection = () => {
         viz.addEventListener(tableau.TableauEventName.MARKS_SELECTION, onMarksSelection);
@@ -35,15 +42,11 @@ const Resize = props => {
         let infoDiv = document.getElementById('markDetails');
         infoDiv.innerHTML = html;
     }
-    
+
     const options = {
         "Academic Year": "",
         hideTabs: true,
         onFirstInteractive: () => listenToMarksSelection()
-    }
-
-    const createViz = () => {
-        viz = new tableau.Viz(ref.current, url, options);
     }
 
     useEffect(() => {
@@ -52,9 +55,9 @@ const Resize = props => {
 
     return (
         <Fragment>
-            <h4>Events Response</h4>
+            <div className='tableau-title'>Events Response</div>
             <div ref={ref} className='tableau-content'></div>
-            <div className='tableau-data'>
+            <div className='tableau-text'>
                 <div id="markDetails">Information about selected marks displays here.</div>
             </div>
         </Fragment>

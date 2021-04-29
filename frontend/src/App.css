@@ -1,25 +1,89 @@
+button{
+  height:2rem;
+}
+
 .App{
   background-color: grey;
+  min-width: 1156px;
+  min-height: 97%;
+  padding:1rem;
 
   position: absolute;
   top:0rem;
   left:0rem;
   right:0rem;
-  bottom: 0rem;
+
+  display: flex;
+  justify-content: center;
+
+}
+
+.container{
+  width:100%;
+  min-height: 90%;
+  padding:.5rem;
+
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.521);
+
+  display:flex;
+}
+
+.tableau-title{
+  font-size: 1rem;
+  margin:0.5rem;
+}
+
+.tableau-content{
+  width:90%;
+  min-height:650px;
+  padding:.5rem;
+  margin:.5rem;
+
+  background-color: white;
+  overflow: scroll;
+  border-radius: 10px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container{
-  background-color: rgba(0, 0, 0, 0.521);
-  width:95%;
-  min-height: 95%;
-  padding:1rem;
+.tableau-buttons{
+  margin: .5rem;
 
+  width:90%;
+}
+
+.tableau-text{
+  padding:.5rem;
+  width:90%;
+
+  background-color: white;
   border-radius: 10px;
 
-  display:flex;
-  justify-content: center;
+  overflow: scroll;
+}
+
+.tableau-options{
+  margin: .5rem;
+  padding:.5rem;
+
+  width:90%;
+}
+
+.tableau-options select{
+  width: 10rem;
+}
+
+.tableau-form{
+  margin: .5rem;
+  padding:0.5rem;
+
+  width:90%;
+}
+
+.tableau-form input{
+  margin: .5rem;
+  height:2rem;
 }
