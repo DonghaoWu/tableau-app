@@ -1,18 +1,20 @@
-import React, { useRef, useEffect, Fragment } from 'react';
+import React, { useRef, useEffect, Fragment, useState } from 'react';
 import './styles.css';
 
 const { tableau } = window;
+const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks";
+const options = {
+    hideTabs: true
+}
 
 const Export = props => {
     const ref = useRef(null);
-    const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks";
-    const options = {
-        hideTabs: true
-    }
-    let viz;
+
+    const [viz, setViz] = useState(null);
 
     const createViz = () => {
-        viz = new tableau.Viz(ref.current, url, options);
+        let newViz = new tableau.Viz(ref.current, url, options);
+        setViz(newViz);
     }
 
     useEffect(() => {
@@ -20,31 +22,31 @@ const Export = props => {
     }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
     // Opens the Download to PDF dialog box
-    function exportToPDF() {
+    const exportToPDF = () => {
         viz.showExportPDFDialog();
     }
 
     // Opens the Download Crosstab dialog box
-    function exportToCSV() {
+    const exportToCSV = () => {
         viz.showExportCrossTabDialog();
     }
 
     // Downloads the crosstab data in an Excel file
-    function exportToExcel() {
+    const exportToExcel = () => {
         viz.exportCrossTabToExcel();
     }
 
     // Opens the Download Image dialog box
-    function exportImage() {
+    const exportImage = () => {
         viz.showExportImageDialog();
     }
 
     // Opens the Download PowerPoint dialog box
-    function exportPowerPoint() {
+    const exportPowerPoint = () => {
         viz.showExportPowerPointDialog();
     }
     // Opens the Download dialog box
-    function showDownloadDialog() {
+    const showDownloadDialog = () => {
         viz.showDownloadDialog();
     }
 

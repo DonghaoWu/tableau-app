@@ -2,16 +2,16 @@ import React, { useRef, useEffect, Fragment } from 'react';
 import './styles.css';
 
 const { tableau } = window;
+const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Flights";
+const options = {
+    device: 'desktop',
+    hideTabs: true
+}
 
 const BasicEmbed = props => {
     const ref = useRef(null);
-    const url = "http://public.tableau.com/views/RegionalSampleWorkbook/Flights";
 
     useEffect(() => {
-        const options = {
-            device: 'desktop',
-            hideTabs: true
-        }
         new tableau.Viz(ref.current, url, options);
     }, [])
 

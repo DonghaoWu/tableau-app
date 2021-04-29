@@ -1,19 +1,22 @@
-import React, { useRef, useEffect, Fragment } from 'react';
+import React, { useRef, useEffect, Fragment, useState } from 'react';
 import './styles.css';
 
 const { tableau } = window;
+const url = "http://public.tableau.com/views/RegionalSampleWorkbook/College";
+const options = {
+    "Academic Year": "",
+    hideTabs: true
+}
 
 const Filter = props => {
     const ref = useRef(null);
-    const url = "http://public.tableau.com/views/RegionalSampleWorkbook/College";
-    const options = {
-        "Academic Year": "",
-        hideTabs: true
-    }
-    let viz;
+
+    const [viz, setViz] = useState(null);
+    const [year, setYear] = useState('All')
 
     const createViz = () => {
-        viz = new tableau.Viz(ref.current, url, options);
+        let newViz = new tableau.Viz(ref.current, url, options);
+        setViz(newViz);
     }
 
     useEffect(() => {
@@ -21,12 +24,14 @@ const Filter = props => {
     }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
     const yearFilter = (e) => {
-        let year = e.target.value;
+        let currentYear = e.target.value;
         let sheet = viz.getWorkbook().getActiveSheet();
-        if (year === "") {
+        if (currentYear === "") {
             sheet.clearFilterAsync("Academic Year");
+            setYear('All');
         } else {
-            sheet.applyFilterAsync("Academic Year", year, tableau.FilterUpdateType.REPLACE);
+            sheet.applyFilterAsync("Academic Year", currentYear, tableau.FilterUpdateType.REPLACE);
+            setYear(currentYear);
         }
     }
 
@@ -42,7 +47,7 @@ const Filter = props => {
                 </select>
             </div>
             <div className='tableau-comment'>
-                <p>My opinion:</p>
+                <p>Current Year: {year}</p>
             </div>
         </Fragment>
     )

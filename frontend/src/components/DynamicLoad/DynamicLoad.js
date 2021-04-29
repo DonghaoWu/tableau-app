@@ -1,41 +1,37 @@
-import React, { useRef, useEffect, Fragment } from 'react';
+import React, { useRef, useEffect, Fragment, useState } from 'react';
 import './styles.css';
 
 const { tableau } = window;
+const vizList = [
+    "http://public.tableau.com/views/RegionalSampleWorkbook/Obesity",
+    "http://public.tableau.com/views/RegionalSampleWorkbook/Flights",
+    "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
+    "http://public.tableau.com/views/RegionalSampleWorkbook/College",
+    "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks"
+];
+const vizLen = vizList.length;
+const options = {
+    hideTabs: true
+};
 
 const DynamicLoad = props => {
     const ref = useRef(null);
-    const vizList = [
-        "http://public.tableau.com/views/RegionalSampleWorkbook/Obesity",
-        "http://public.tableau.com/views/RegionalSampleWorkbook/Flights",
-        "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
-        "http://public.tableau.com/views/RegionalSampleWorkbook/College",
-        "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks"
-    ];
 
-    let viz;
-    let vizCount = 0;
-    const vizLen = vizList.length;
+    const [viz, setViz] = useState(null);
+    const [vizCount, setVizCount] = useState(0);
 
     const createViz = (vizPlusMinus) => {
-        const options = {
-            hideTabs: true
-        };
+        let currentCount = vizCount + vizPlusMinus;
+        if (viz) viz.dispose();
 
-        vizCount = vizCount + vizPlusMinus;
+        if (currentCount >= vizLen) currentCount = 0;
+        else if (currentCount < 0) currentCount = vizLen - 1;
 
-        if (vizCount >= vizLen) {
-            vizCount = 0;
-        } else if (vizCount < 0) {
-            vizCount = vizLen - 1;
-        }
+        let vizURL = vizList[currentCount];
+        let newViz = new tableau.Viz(ref.current, vizURL, options);
 
-        if (viz) {
-            viz.dispose();
-        }
-
-        var vizURL = vizList[vizCount];
-        viz = new tableau.Viz(ref.current, vizURL, options);
+        setViz(newViz);
+        setVizCount(currentCount);
     }
 
     useEffect(() => {
